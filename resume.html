@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thys Watabe Hansen - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Add some subtle animations */
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Stagger the animation for sections */
+        .section-fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .section-fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .section-fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .section-fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .section-fade-in:nth-child(5) { animation-delay: 0.5s; }
+        .section-fade-in:nth-child(6) { animation-delay: 0.6s; }
+        .section-fade-in:nth-child(7) { animation-delay: 0.7s; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-indigo-700">Thys Hansen Resume</h1>
+            <a href="index.html" class="text-indigo-600 hover:text-indigo-800">Photo page</a>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-6 md:p-12 mt-8">
+
+        <section class="bg-white rounded-lg shadow-md p-8 md:p-12 mb-8 flex flex-col md:flex-row items-center section-fade-in">
+            <img
+                src="assets/img/Thys Headshot.jpg"
+                alt="Thys Hansen Profile Picture Placeholder"
+                class="w-32 h-32 md:w-40 md:h-40 rounded-full mr-0 md:mr-8 mb-6 md:mb-0 border-4 border-indigo-200 object-cover"
+                onerror="this.onerror=null; this.src='https://placehold.co/150x150/CCCCCC/4F46E5?text=Image+Error';"
+            >
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-2">Thys Watabe Hansen</h1>
+                <p class="text-lg text-gray-600">Accounting Major at Brigham Young University</p>
+                <p class="mt-4 text-gray-700">
+                    Hello! I'm Thys Hansen, a sophomore at Brigham Young University studying accounting. With a passion for working with people and a diverse skill set spanning from Adobe Suite proficiency to leadership experience, I am seeking opportunities to apply my abilities and contribute to a dynamic team.
+                </p>
+                 <div class="mt-4 flex space-x-4">
+                    <a href="tel:385-450-5555" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        385-450-9416
+                    </a>
+                    <a href="mailto: yourmom@gmail.com" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        watathys@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 border-b pb-2">About Me</h2>
+            <p class="text-gray-700 leading-relaxed">
+                I am 21 years old and from Lindon, Utah. My experiences include serving a full-time mission for the Church of Jesus Christ of Latter-day Saints in Sapporo, Japan (May 2022 - May 2024), where I developed significant leadership skills through organizing events, leading key discussions and conferences, and contributing to social media content creation (Japan Sapporo Facebook page). I am adaptable, genuinely enjoy meeting and working with people, and am described by previous employers as insightful, friendly, and diligent.
+            </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 border-b pb-2">Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Adobe Suite</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Microsoft Excel</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Davinci Resolve</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">JavaScript</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Leadership</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Editing</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Photography</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Videography</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Social Media</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full text-center">Teamwork</span>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-6 border-b pb-2">Work Experience</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Photo and Video Lead</h3>
+                    <p class="text-md text-indigo-600 font-medium">Wheatley Institute</p>
+                    <p class="text-sm text-gray-500 mb-2">2024 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 pl-4">
+                        <li>Collaborate with a team of four to visually communicate Wheatley Institute's mission through professional photography and videography.</li>
+                        <li>Capture and document key events, including lecture series, corporate conferences, student retreats, and special institute gatherings.</li>
+                        <li>Develop photo and video assets for branding, marketing, and publication, enhancing the institute's visual identity.</li>
+                        <li>Work closely with stakeholders to ensure visual content aligns with the institute's messaging and audience engagement goals.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">FSY Counselor</h3>
+                    <p class="text-md text-indigo-600 font-medium">Church of Jesus Christ of Latter-day Saints</p>
+                    <p class="text-sm text-gray-500 mb-2">2024</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 pl-4">
+                        <li>Mentored and supported youth (ages 14-18) by building meaningful friendships, fostering an inclusive environment, and encouraging spiritual growth.</li>
+                        <li>Facilitated gospel-centered discussions and devotionals to help participants strengthen their testimonies.</li>
+                        <li>Maintained a balance of being a friend and counselor, ensuring adherence to program rules and standards while creating a safe, respectful, and uplifting atmosphere.</li>
+                        <li>Organized and facilitated daily activities, games, and lessons, promoting active participation and spiritual engagement.</li>
+                        <li>Worked closely with a team of FSY counselors to identify areas for improvement, share best practices, and implement innovative approaches.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Dance Accompanist</h3>
+                    <p class="text-md text-indigo-600 font-medium">Brigham Young University</p>
+                    <p class="text-sm text-gray-500 mb-2">2022 - Present</p>
+                     <ul class="list-disc list-inside text-gray-700 space-y-1 pl-4">
+                        <li>Played live piano music for ballet technique classes, supporting instruction through appropriate music selections aligned with movements, exercises, and progressions.</li>
+                        <li>Required a deep understanding of ballet class structure and the ability to interpret/adapt music to different tempos, rhythms, and moods.</li>
+                        <li>Collaborated effectively with dance professors.</li>
+                        <li>Utilized extensive background (15+ years, scholarships) in classical piano performance.</li>
+                        <li>Chose, practiced, and played music fitting the structure and aesthetic of ballet, modifying pieces in real-time to foster a creative learning environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 border-b pb-2">Education</h2>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">High School Diploma</h3>
+                <p class="text-md text-indigo-600 font-medium">Timpanogos High School</p>
+                <p class="text-sm text-gray-500 mb-2">2019 - 2021</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 pl-4">
+                    <li>Graduated with honors in 2021.</li>
+                    <li>Captain of cross country team (ranked 9th in the nation).</li>
+                    <li>Cross country First Team All State in the state of Utah.</li>
+                </ul>
+            </div>
+             <div class="mt-4">
+                <h3 class="text-xl font-semibold text-gray-800">Bachelor's Degree (In Progress)</h3>
+                <p class="text-md text-indigo-600 font-medium">Brigham Young University</p>
+                <p class="text-sm text-gray-500 mb-2">Sophomore - Accounting Major</p>
+             </div>
+        </section>
+
+        <!-- <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-4 border-b pb-2">Languages</h2>
+            <div class="flex space-x-4">
+                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">English (Native)</span>
+                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Japanese</span>
+            </div>
+        </section> -->
+
+        <section class="bg-white rounded-lg shadow-md p-8 mb-8 section-fade-in">
+            <h2 class="text-2xl font-semibold text-indigo-700 mb-6 border-b pb-2">References</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-md border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-800">Ken Toma</h3>
+                    <p class="text-sm text-gray-600 flex items-center mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        +81 807-383-9911
+                    </p>
+                    <p class="text-sm text-gray-600 flex items-center mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-500

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Letter Wordle</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #game-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #guess-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            width: 80px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #guess-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        #feedback-container {
+            margin-bottom: 15px;
+        }
+
+        .feedback-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+
+        .feedback-letter {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .correct {
+            background-color: #4CAF50; /* Green */
+        }
+
+        .present {
+            background-color: #FFC107; /* Yellow */
+            color: #333;
+        }
+
+        .absent {
+            background-color: #9E9E9E; /* Gray */
+        }
+
+        #message {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <a href="scratch.html">Back</a>
+    <h1>2-Letter Wordle</h1>
+    <div id="game-container">
+        <input type="text" id="guess-input" maxlength="2" placeholder="Enter guess">
+        <button id="guess-button">Guess</button>
+        <div id="feedback-container">
+            </div>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const wordList = ["BE", "TO", "IN", "IT", "IS", "AS", "AT", "SO", "WE", "HE",
+ "BY", "OR", "DO", "IF", "ME", "MY", "UP", "AN", "GO", "NO",
+ "US", "AM", "AB", "AA", "AD", "AE", "AG", "AH", "AI", "AL", 
+ "AR", "AW", "AX", "AY", "BA", "BI", "BO", "DA", "DE", "ED", 
+ "EF", "EH", "EL", "EM", "EN", "ER", "ES", "ET", "EX", "FA", 
+ "HA", "HI", "HM", "HO", "ID", "JO", "KA", "KI", "LA", "LI", 
+ "LO", "MA", "MI", "MM", "MO", "MU", "NA", "NE", "NU", "OD", 
+ "OE", "OF", "OH", "OI", "OM", "ON", "OP", "OS", "OW", "OX", 
+ "OY"];
+        let secretWord = wordList[Math.floor(Math.random() * wordList.length)];
+        let attempts = 6;
+        let guesses = [];
+        const feedbackContainer = document.getElementById('feedback-container');
+        const guessInput = document.getElementById('guess-input');
+        const guessButton = document.getElementById('guess-button');
+        const messageElement = document.getElementById('message');
+
+        guessButton.addEventListener('click', handleGuess);
+        guessInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                handleGuess();
+            }
+        });
+
+        function handleGuess() {
+            const guess = guessInput.value.toUpperCase();
+            guessInput.value = '';
+
+            if (guess.length !== 2 || !/^[A-Z]+$/.test(guess)) {
+                messageElement.textContent = "Please enter a valid 2-letter word.";
+                return;
+            }
+
+            if (guesses.length < attempts) {
+                guesses.push(guess);
+                renderFeedback();
+
+                if (guess === secretWord) {
+                    messageElement.textContent = `Congratulations! You guessed "${secretWord}"!`;
+                    guessButton.disabled = true;
+                    guessInput.disabled = true;
+                } else if (guesses.length === attempts) {
+                    messageElement.textContent = `You ran out of attempts. The word was "${secretWord}".`;
+                    guessButton.disabled = true;
+                    guessInput.disabled = true;
+                }
+            }
+        }
+
+        function renderFeedback() {
+            feedbackContainer.innerHTML = '';
+            guesses.forEach(guess => {
+                const feedbackRow = document.createElement('div');
+                feedbackRow.classList.add('feedback-row');
+                for (let i = 0; i < 2; i++) {
+                    const feedbackLetter = document.createElement('div');
+                    feedbackLetter.classList.add('feedback-letter');
+                    feedbackLetter.textContent = guess[i];
+                    if (guess[i] === secretWord[i]) {
+                        feedbackLetter.classList.add('correct');
+                    } else if (secretWord.includes(guess[i])) {
+                        feedbackLetter.classList.add('present');
+                    } else {
+                        feedbackLetter.classList.add('absent');
+                    }
+                    feedbackRow.appendChild(feedbackLetter);
+                }
+                feedbackContainer.appendChild(feedbackRow);
+            });
+        }
+    </script>
+</body>
+</html>
