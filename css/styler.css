@@ -1,0 +1,35 @@
+body{
+    font-family: Papyrus, Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    background-color: rgb(60, 169, 191);
+    color: rgb(0, 0, 0);
+    background-image: url(https://wallpapercat.com/w/full/7/7/4/1198914-2560x1440-desktop-hd-studio-ghibli-wallpaper-photo.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+a {
+    color: aquamarine;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+img{
+    border: 5px solid orange;
+    padding: 5px;
+    height: 200px;
+    margin: auto;
+    /* display: block; */
+}
+
+li{
+    width: fit-content;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+
